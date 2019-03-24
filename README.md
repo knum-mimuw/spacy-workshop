@@ -3,7 +3,7 @@
 Building aspect-based sentiment analysis system to analyze product reviews using spaCy and Keras.
 
 This workshop was originally presented at [Warsaw IT Days 2019](https://warszawskiedniinformatyki.pl)
-by [Stansiław Giziński](https://github.com/Gizzio) and [Krzysztof Kowalczyk](https://github.com/kowaalczyk) 
+by [Stanisław Giziński](https://github.com/Gizzio) and [Krzysztof Kowalczyk](https://github.com/kowaalczyk) 
 from our [Machine Learning Club](https://www.facebook.com/KNUM.MIMUW/).
 
 ## Environment setup
@@ -24,7 +24,7 @@ To check if the setup process was completed, go to [`localhost:8888`](http://loc
 select "new console: Python 3" and type the following lines into the console:
 ```python
 import spacy
-nlp = spacy.load("en")
+nlp = spacy.load("en_core_web_sm")
 ```
 If the code doesn't crash, everything was installed correctly.
 
