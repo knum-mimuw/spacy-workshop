@@ -20,7 +20,7 @@ Any other distribution of `Python>=3.7` should do fine, but if you want to have 
 5. Download machine learning models: `python -m spacy download en`
 6. Navigate to the cloned repository folder (`cd spacy-workshop`) and start jupyter lab (`jupyter lab`)
 7. Download ["The Guardian Articles" dataset](http://knum.mimuw.edu.pl/spacy-workshop/) and extract it (there is only one CSV in there, place it in the cloned repository folder.
-
+8. Download [Semeval aspect-based sentiment analysis dataset](http://metashare.ilsp.gr:8080/repository/download/cd28e738562f11e59e2c842b2b6a04d703f9dae461bb4816a5d4320019407d23/). Unfortunately you have to create an account there, because we are not allowed to redistribute this dataset directly due to licensing issues.
 To check if the setup process was completed, go to [`localhost:8888`](http://localhost:8888/lab),
 select "new console: Python 3" and type the following lines into the console:
 ```python
