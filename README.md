@@ -19,6 +19,7 @@ Any other distribution of `Python>=3.7` should do fine, but if you want to have 
 4. Activate the environment: `source activate spacy-wdi` (on Windows: `activate spacy-wdi`)
 5. Download machine learning models: `python -m spacy download en`
 6. Navigate to the cloned repository folder (`cd spacy-workshop`) and start jupyter lab (`jupyter lab`)
+7. Download ["The Guardian Articles" dataset](http://knum.mimuw.edu.pl/spacy-workshop/) and extract it (there is only one CSV in there, place it in the cloned repository folder.
 
 To check if the setup process was completed, go to [`localhost:8888`](http://localhost:8888/lab),
 select "new console: Python 3" and type the following lines into the console:
