@@ -6,6 +6,8 @@ This workshop was originally presented at [Warsaw IT Days 2019](https://warszaws
 by [Stanisław Giziński](https://github.com/Gizzio) and [Krzysztof Kowalczyk](https://github.com/kowaalczyk) 
 from our [Machine Learning Club](https://www.facebook.com/KNUM.MIMUW/).
 
+We are also currently implementing full support for Polish language in spaCy, you can track our progress via [our GitHub organization](https://github.com/spacy-pl) and the see results on [our project website](http://spacypl.sigmoidal.io)
+
 ## Environment setup
 
 We will be using Anaconda distribution of Python to make installation of machine learning libraries easier.
@@ -34,7 +36,7 @@ If the code doesn't crash, everything was installed correctly.
 ## Workshop
 
 During the workshops, we will be:
-- learning about NLP from notebooks 1&2
+- learning about NLP from notebooks: [1-NLP-Introduction.ipynb](1-NLP-Introduction.ipynb) and [2-NLP-Glossary.ipynb](2-NLP-Glossary.ipynb)
 - going through spaCy library: objects, methods, attributes, etc.
 - (optional) building an aspect-based sentiment analysis pipeline on SemEval dataset (for reference implementation see [`utils/SemEval.ipynb`](utils/SemEval.ipynb))
 - (optional) building a standard sentiment analysis pipeline for Guardian articles (for reference implementation see [`utils/TheGuardian.ipynb`](utils/TheGuardian.ipynb))
