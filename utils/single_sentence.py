@@ -25,16 +25,24 @@ class SingleSentence(object):
         Returns last position (index) of the single sentence in original document.
         """
         return max(self.subtree, key=lambda token: token.i).i
+    
+    @property
+    def tokens(self):
+        """
+        Return list of tokens.
+        """
+        return sorted(list(self.subtree), key=lambda token: token.idx)
 
 
 def default_root_finding_strategy(token: Token) -> bool:
-    return (token.pos_=='VERB' and token.dep_ in {'ccomp', 'conj'}) or token.dep_=='ROOT'
+    return (token.pos_ in {'VERB', 'ADJ'} and token.dep_ in {'ccomp', 'conj'}) or token.dep_=='ROOT'
 
 
 class SingleSentenceSplitter(object):
     """
     Splits complex sentences into single-verb sentences using provided root-finding strategy.
-    Strategy is a function that, given a Token, should return True if this token is a root of a sentence.
+    Strategy is a function that, given a Token, shou
+    ld return True if this token is a root of a sentence.
     """
     def __init__(self, root_finding_strategy: Callable[[Token], bool]=default_root_finding_strategy):
         self.root_finding_strategy = root_finding_strategy
@@ -57,9 +65,11 @@ class SingleSentenceSplitter(object):
         for i, s1 in enumerate(single_sents):
             for j, s2 in enumerate(single_sents[:i]):
                 assert(j<i)
-                if s1.subtree.issubset(s2.subtree):
+                #if s1.subtree.issubset(s2.subtree):
+                if s1.root in s2.subtree:
                     single_sents[j].subtree = single_sents[j].subtree - s1.subtree
-                if s2.subtree.issubset(s1.subtree):
+                #if s2.subtree.issubset(s1.subtree):
+                if s2.root in s1.subtree:
                     single_sents[i].subtree = single_sents[i].subtree - s2.subtree
         return single_sents
 
@@ -70,7 +80,9 @@ class SingleSentenceSplitter(object):
         for sent in doc.sents:
             separated_sents = self._make_unique(self._get_single_sentences(doc))
             for single_sent in separated_sents:
-                yield doc[single_sent.start_idx:single_sent.end_index]
+                #yield doc[single_sent.start_idx:single_sent.end_index]
+                yield single_sent.tokens
+
 
 
 def run_example():

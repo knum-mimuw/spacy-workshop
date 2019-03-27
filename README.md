@@ -33,4 +33,8 @@ If the code doesn't crash, everything was installed correctly.
 
 ## Workshop
 
-During the workshops, we will be following steps in notebooks 1 to 4.
+During the workshops, we will be:
+- learning about NLP from notebooks 1&2
+- going through spaCy library: objects, methods, attributes, etc.
+- (optional) building an aspect-based sentiment analysis pipeline on SemEval dataset (for reference implementation see [`utils/SemEval.ipynb`](utils/SemEval.ipynb))
+- (optional) building a standard sentiment analysis pipeline for Guardian articles (for reference implementation see [`utils/TheGuardian.ipynb`](utils/TheGuardian.ipynb))
